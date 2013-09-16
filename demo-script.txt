@@ -1,0 +1,12 @@
+1. start stoxy
+2. create a container with libcdmi (headers switched on)
+3. show a container via ssh
+    - cat properties
+4. show keystone token
+5. create an object with curl + keystone (non-cdmi)
+6. show via ssh object properties
+    - OBJECT ID
+    - URL
+7. create an object with libcdmi (cdmi data type)
+7. retrieve with curl + keystone + non-cdmi data type
+8. show event log via ssh

@@ -13,7 +13,13 @@ server = 'http://localhost:8080'
 
 c = libcdmi.open(server, credentials=('john', 'john'))
 
-response = c.create_object('/storage/test-cdmi-file', 'create-object.py',
+response = c.create_container('/storage/swift',
+                            metadata={
+                            'stoxy_backend': 'swift',
+                            'stoxy_backend_base': 'swift.example.com/v1/account/container/'
+                        })
+
+response = c.create_object('/storage/swift/test-cdmi-file', 'create-object.py',
                             metadata={'event name': 'SNIA SDC 2013',
                                       'event location': 'Santa Clara, CA'})
 
